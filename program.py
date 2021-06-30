@@ -66,7 +66,7 @@ log("avgPerH " + str(avgPerH))
 log("dayEarnings " + str(dayEarnings))
 log("providers " + str(providers))
 
-log("top 5 providers " + str(topProviders))
+log("top 5 providers " + "\n\ntop 1: " + str(top1amount) + "\n\ntop 2: " + str(top2amount) + "\n\ntop 3: " + str(top3amount) + "\n\ntop 4: " + str(top4amount) + "\n\ntop 5: " + str(top5amount))
 
 log("OOGA BOOGA!\n\nAverage Start " + str(avgStart) + "\nAverage CPU/hour " + str(avgCpu) + "\nAverage per hour " + str(avgPerH) + "\nDay Earnings(24h) " + str(dayEarnings) + "\nOnline Providers " + str(providers) + "\n\n[Command List](https://siasky.net/AADsQBY2Bguqfitm2cMGaLrdIJ0ObWOtZignAF45f_Of-w)")
 log("AAAaaaaAAAAaa!!!\n\nAverage Start " + str(avgStart) + "\nAverage CPU/hour " + str(avgCpu) + "\nAverage per hour " + str(avgPerH) + "\n\n[Command List](https://siasky.net/AADsQBY2Bguqfitm2cMGaLrdIJ0ObWOtZignAF45f_Of-w)")
