@@ -13,15 +13,15 @@ def log(text):
 json_file = open("config.json")
 variables = json.load(json_file)
 json_file.close()
+
+debug = variables['debug']
+canPost = variables['canPost']
     
 log("client_id " + variables['client_id'])
 log("client_secret " + variables['client_secret'])
 log("user_agent " + variables['user_agent'])
 log("username " + variables['username'])
 log("password " + variables['password'])
-
-debug = variables['debug']
-canPost = variables['canPost']
         
 # reddit instance init
 reddit = praw.Reddit(
