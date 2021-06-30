@@ -13,15 +13,15 @@ def log(text):
 json_file = open("config.json")
 variables = json.load(json_file)
 json_file.close()
+
+debug = variables['debug']
+canPost = variables['canPost']
     
 log("client_id " + variables['client_id'])
 log("client_secret " + variables['client_secret'])
 log("user_agent " + variables['user_agent'])
 log("username " + variables['username'])
 log("password " + variables['password'])
-
-debug = variables['debug']
-canPost = variables['canPost']
         
 # reddit instance init
 reddit = praw.Reddit(
@@ -50,12 +50,21 @@ response = requests.get("https://api.stats.golem.network/v1/network/online/stats
 
 providers = response['online']
 
+response = requests.get("https://api.stats.golem.network/v1/requestors").json()
+
+top1amount = response[0]["tasks_requested"]
+top2amount = response[1]["tasks_requested"]
+top3amount = response[2]["tasks_requested"]
+top4amount = response[3]["tasks_requested"]
+top5amount = response[4]["tasks_requested"]
+
 log("length " + str(length))
 log("avgStart " + str(avgStart))
 log("avgCpu " + str(avgCpu))
 log("avgPerH " + str(avgPerH))
 log("dayEarnings " + str(dayEarnings))
 log("providers " + str(providers))
+log("top 5 providers " + "\n\ntop 1: " + str(top1amount) + "\n\ntop 2: " + str(top2amount) + "\n\ntop 3: " + str(top3amount) + "\n\ntop 4: " + str(top4amount) + "\n\ntop 5: " + str(top5amount))
 log("OOGA BOOGA!\n\nAverage Start " + str(avgStart) + "\nAverage CPU/hour " + str(avgCpu) + "\nAverage per hour " + str(avgPerH) + "\nDay Earnings(24h) " + str(dayEarnings) + "\nOnline Providers " + str(providers) + "\n\n[Command List](https://siasky.net/AADsQBY2Bguqfitm2cMGaLrdIJ0ObWOtZignAF45f_Of-w)")
 log("AAAaaaaAAAAaa!!!\n\nAverage Start " + str(avgStart) + "\nAverage CPU/hour " + str(avgCpu) + "\nAverage per hour " + str(avgPerH) + "\n\n[Command List](https://siasky.net/AADsQBY2Bguqfitm2cMGaLrdIJ0ObWOtZignAF45f_Of-w)")
 log("very money such wow\n\nDay Earnings(24h) " + str(dayEarnings) + "\n\n[Command List](https://siasky.net/AADsQBY2Bguqfitm2cMGaLrdIJ0ObWOtZignAF45f_Of-w)")
@@ -72,6 +81,15 @@ for submission in subreddit.new(limit=1):
             comment_lower = comment.body.lower()
             log("------------------")
             log(comment_lower)
+            if "!topRequestors" in comment_lower:
+                for reply in comment.replies:
+                    if "golem-stat-bot" == reply.author.name:
+                        canPost = 0
+                if canPost:
+                    log("bot wasnt here")
+                    log("----- REPLY -----")
+                    log("SHEEEEEEEEEEEEEEEEESH" + "\n\nTop 5 providers by amount are:" + "\n\ntop 1: " + str(top1amount) + "\n\ntop 2: " + str(top2amount) + "\n\ntop 3: " + str(top3amount) + "\n\ntop 4: " + str(top4amount) + "\n\ntop 5: " + str(top5amount) + "\n\n[Command List](https://siasky.net/AADsQBY2Bguqfitm2cMGaLrdIJ0ObWOtZignAF45f_Of-w)")
+                    comment.reply("SHEEEEEEEEEEEEEEEEESH" + "\n\nTop 5 providers by amount are:" + "\n\ntop 1: " + str(top1amount) + "\n\ntop 2: " + str(top2amount) + "\n\ntop 3: " + str(top3amount) + "\n\ntop 4: " + str(top4amount) + "\n\ntop 5: " + str(top5amount) + "\n\n[Command List](https://siasky.net/AADsQBY2Bguqfitm2cMGaLrdIJ0ObWOtZignAF45f_Of-w)")
             if "!full" in comment_lower:
                 for reply in comment.replies:
                     if "golem-stat-bot" == reply.author.name:
