@@ -52,7 +52,6 @@ providers = response['online']
 
 response = requests.get("https://api.stats.golem.network/v1/requestors").json()
 
-
 top1amount = response[0]
 top2amount = response[1]
 top3amount = response[2]
@@ -65,7 +64,6 @@ log("avgCpu " + str(avgCpu))
 log("avgPerH " + str(avgPerH))
 log("dayEarnings " + str(dayEarnings))
 log("providers " + str(providers))
-
 log("top 5 providers " + str(topProviders))
 
 log("OOGA BOOGA!\n\nAverage Start " + str(avgStart) + "\nAverage CPU/hour " + str(avgCpu) + "\nAverage per hour " + str(avgPerH) + "\nDay Earnings(24h) " + str(dayEarnings) + "\nOnline Providers " + str(providers) + "\n\n[Command List](https://siasky.net/AADsQBY2Bguqfitm2cMGaLrdIJ0ObWOtZignAF45f_Of-w)")
@@ -84,7 +82,6 @@ for submission in subreddit.new(limit=1):
             comment_lower = comment.body.lower()
             log("------------------")
             log(comment_lower)
-            
             if "!topRequestors" in comment_lower:
                 for reply in comment.replies:
                     if "golem-stat-bot" == reply.author.name:
@@ -94,7 +91,6 @@ for submission in subreddit.new(limit=1):
                 log("----- REPLY -----")
                 log("SHEEEEEEEEEEEEEEEEESH" + "\n\nTop 5 providers by amount are:" + "\n\ntop 1: " + str(top1amount) + "\n\ntop 2: " + str(top2amount) + "\n\ntop 3: " + str(top3amount) + "\n\ntop 4: " + str(top4amount) + "\n\ntop 5: " + str(top5amount) + "\n\n[Command List](https://siasky.net/AADsQBY2Bguqfitm2cMGaLrdIJ0ObWOtZignAF45f_Of-w)")
                 comment.reply("SHEEEEEEEEEEEEEEEEESH" + "\n\nTop 5 providers by amount are:" + "\n\ntop 1: " + str(top1amount) + "\n\ntop 2: " + str(top2amount) + "\n\ntop 3: " + str(top3amount) + "\n\ntop 4: " + str(top4amount) + "\n\ntop 5: " + str(top5amount) + "\n\n[Command List](https://siasky.net/AADsQBY2Bguqfitm2cMGaLrdIJ0ObWOtZignAF45f_Of-w)")
-        
             if "!full" in comment_lower:
                 for reply in comment.replies:
                     if "golem-stat-bot" == reply.author.name:
