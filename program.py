@@ -52,11 +52,11 @@ providers = response['online']
 
 response = requests.get("https://api.stats.golem.network/v1/requestors").json()
 
-top1amount = response[0]
-top2amount = response[1]
-top3amount = response[2]
-top4amount = response[3]
-top5amount = response[4]
+top1amount = response[0]["tasks_requested"]
+top2amount = response[1]["tasks_requested"]
+top3amount = response[2]["tasks_requested"]
+top4amount = response[3]["tasks_requested"]
+top5amount = response[4]["tasks_requested"]
 
 log("length " + str(length))
 log("avgStart " + str(avgStart))
