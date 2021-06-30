@@ -81,7 +81,7 @@ for submission in subreddit.new(limit=1):
             comment_lower = comment.body.lower()
             log("------------------")
             log(comment_lower)
-            if "!topRequestors" in comment_lower:
+            if "!toprequestors" in comment_lower:
                 for reply in comment.replies:
                     if "golem-stat-bot" == reply.author.name:
                         canPost = 0
