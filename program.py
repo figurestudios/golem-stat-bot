@@ -64,11 +64,11 @@ log("avgCpu " + str(avgCpu))
 log("avgPerH " + str(avgPerH))
 log("dayEarnings " + str(dayEarnings))
 log("providers " + str(providers))
-log("top 5 providers " + "\n\ntop 1: " + str(top1amount) + "\n\ntop 2: " + str(top2amount) + "\n\ntop 3: " + str(top3amount) + "\n\ntop 4: " + str(top4amount) + "\n\ntop 5: " + str(top5amount))
-log("OOGA BOOGA!\n\nAverage Start " + str(avgStart) + "\nAverage CPU/hour " + str(avgCpu) + "\nAverage per hour " + str(avgPerH) + "\nDay Earnings(24h) " + str(dayEarnings) + "\nOnline Providers " + str(providers) + "\n\n[Command List](https://siasky.net/AADsQBY2Bguqfitm2cMGaLrdIJ0ObWOtZignAF45f_Of-w)")
-log("AAAaaaaAAAAaa!!!\n\nAverage Start " + str(avgStart) + "\nAverage CPU/hour " + str(avgCpu) + "\nAverage per hour " + str(avgPerH) + "\n\n[Command List](https://siasky.net/AADsQBY2Bguqfitm2cMGaLrdIJ0ObWOtZignAF45f_Of-w)")
-log("very money such wow\n\nDay Earnings(24h) " + str(dayEarnings) + "\n\n[Command List](https://siasky.net/AADsQBY2Bguqfitm2cMGaLrdIJ0ObWOtZignAF45f_Of-w)")
-log("Now this is a lot!\n\nOnline Providers " + str(providers) + "\n\n[Command List](https://siasky.net/AADsQBY2Bguqfitm2cMGaLrdIJ0ObWOtZignAF45f_Of-w)")
+log("Top 5 providers " + "\n\nTop 1: " + str(top1amount) + "\n\nTop 2: " + str(top2amount) + "\n\nTtop 3: " + str(top3amount) + "\n\nTop 4: " + str(top4amount) + "\n\nTop 5: " + str(top5amount))
+log("OOGA BOOGA!\n\nAverage Start " + str(avgStart) + "\nAverage CPU/hour " + str(avgCpu) + "\nAverage per hour " + str(avgPerH) + "\nDay Earnings(24h) " + str(dayEarnings) + "\nOnline Providers " + str(providers) + "\n\n[Command List](https://siasky.net/AAC1UFWIyuEahU1EdufDtBoRa-fqQ6iYP-aX2aUVAE-ncw)")
+log("AAAaaaaAAAAaa!!!\n\nAverage Start " + str(avgStart) + "\nAverage CPU/hour " + str(avgCpu) + "\nAverage per hour " + str(avgPerH) + "\n\n[Command List](https://siasky.net/AAC1UFWIyuEahU1EdufDtBoRa-fqQ6iYP-aX2aUVAE-ncw)")
+log("very money such wow\n\nDay Earnings(24h) " + str(dayEarnings) + "\n\n[Command List](https://siasky.net/AAC1UFWIyuEahU1EdufDtBoRa-fqQ6iYP-aX2aUVAE-ncw)")
+log("Now this is a lot!\n\nOnline Providers " + str(providers) + "\n\n[Command List](https://siasky.net/AAC1UFWIyuEahU1EdufDtBoRa-fqQ6iYP-aX2aUVAE-ncw)")
 # reddit shenanigans
 subreddit = reddit.subreddit("GolemProject")
 
@@ -88,8 +88,8 @@ for submission in subreddit.new(limit=1):
                 if canPost:
                     log("bot wasnt here")
                     log("----- REPLY -----")
-                    log("SHEEEEEEEEEEEEEEEEESH" + "\n\nTop 5 providers by amount are:" + "\n\ntop 1: " + str(top1amount) + "\n\ntop 2: " + str(top2amount) + "\n\ntop 3: " + str(top3amount) + "\n\ntop 4: " + str(top4amount) + "\n\ntop 5: " + str(top5amount) + "\n\n[Command List](https://siasky.net/AADsQBY2Bguqfitm2cMGaLrdIJ0ObWOtZignAF45f_Of-w)")
-                    comment.reply("SHEEEEEEEEEEEEEEEEESH" + "\n\nTop 5 providers by amount are:" + "\n\ntop 1: " + str(top1amount) + "\n\ntop 2: " + str(top2amount) + "\n\ntop 3: " + str(top3amount) + "\n\ntop 4: " + str(top4amount) + "\n\ntop 5: " + str(top5amount) + "\n\n[Command List](https://siasky.net/AADsQBY2Bguqfitm2cMGaLrdIJ0ObWOtZignAF45f_Of-w)")
+                    log("SHEEEEEEEEEEEEEEEEESH" + "\n\nTop 5 providers by amount are:" + "\n\ntop 1: " + str(top1amount) + "\n\ntop 2: " + str(top2amount) + "\n\ntop 3: " + str(top3amount) + "\n\ntop 4: " + str(top4amount) + "\n\ntop 5: " + str(top5amount) + "\n\n[Command List](https://siasky.net/AAC1UFWIyuEahU1EdufDtBoRa-fqQ6iYP-aX2aUVAE-ncw)")
+                    comment.reply("SHEEEEEEEEEEEEEEEEESH" + "\n\nTop 5 providers by amount are:" + "\n\ntop 1: " + str(top1amount) + "\n\ntop 2: " + str(top2amount) + "\n\ntop 3: " + str(top3amount) + "\n\ntop 4: " + str(top4amount) + "\n\ntop 5: " + str(top5amount) + "\n\n[Command List](https://siasky.net/AAC1UFWIyuEahU1EdufDtBoRa-fqQ6iYP-aX2aUVAE-ncw)")
             if "!full" in comment_lower:
                 for reply in comment.replies:
                     if "golem-stat-bot" == reply.author.name:
@@ -98,7 +98,7 @@ for submission in subreddit.new(limit=1):
                     log("bot wasnt here")
                     log("----- REPLY -----")
                     log("OOGA BOOGA!\n\nAverage Start " + str(avgStart) + " GLM" + "\n\nAverage CPU/hour " + str(avgCpu) + " GLM" + "\n\nAverage per hour " + str(avgPerH) + " GLM" + "\n\nDay Earnings(24h) " + str(dayEarnings) + " GLM" + "\n\nOnline Providers " + str(providers))
-                    comment.reply("OOGA BOOGA!\n\nAverage Start " + str(avgStart) + " GLM" + "\n\nAverage CPU/hour " + str(avgCpu) + " GLM" + "\n\nAverage per hour " + str(avgPerH) + " GLM" + "\n\nDay Earnings(24h) " + str(dayEarnings) + " GLM" + "\n\nOnline Providers " + str(providers) + "\n\n[Command List](https://siasky.net/AADsQBY2Bguqfitm2cMGaLrdIJ0ObWOtZignAF45f_Of-w)")
+                    comment.reply("OOGA BOOGA!\n\nAverage Start " + str(avgStart) + " GLM" + "\n\nAverage CPU/hour " + str(avgCpu) + " GLM" + "\n\nAverage per hour " + str(avgPerH) + " GLM" + "\n\nDay Earnings(24h) " + str(dayEarnings) + " GLM" + "\n\nOnline Providers " + str(providers) + "\n\n[Command List](https://siasky.net/AAC1UFWIyuEahU1EdufDtBoRa-fqQ6iYP-aX2aUVAE-ncw)")
                 canPost = 1
             if "!average" in comment_lower:
                 for reply in comment.replies:
@@ -107,7 +107,7 @@ for submission in subreddit.new(limit=1):
                 if canPost:
                     log("bot wasnt here")
                     log("----- REPLY -----")
-                    comment.reply("AAAaaaaAAAAaa!!!\n\nAverage Start " + str(avgStart) + " GLM" + "\n\nAverage CPU/hour " + str(avgCpu) + " GLM" + "\n\nAverage per hour " + str(avgPerH) + " GLM" + "\n\n[Command List](https://siasky.net/AADsQBY2Bguqfitm2cMGaLrdIJ0ObWOtZignAF45f_Of-w)")
+                    comment.reply("AAAaaaaAAAAaa!!!\n\nAverage Start " + str(avgStart) + " GLM" + "\n\nAverage CPU/hour " + str(avgCpu) + " GLM" + "\n\nAverage per hour " + str(avgPerH) + " GLM" + "\n\n[Command List](https://siasky.net/AAC1UFWIyuEahU1EdufDtBoRa-fqQ6iYP-aX2aUVAE-ncw)")
                 canPost = 1
             if "!earnings" in comment_lower:
                 for reply in comment.replies:
@@ -116,7 +116,7 @@ for submission in subreddit.new(limit=1):
                 if canPost:
                     log("bot wasnt here")
                     log("----- REPLY -----")
-                    comment.reply("very money such wow\n\nDay Earnings(24h) " + str(dayEarnings) + " GLM" + "\n\n[Command List](https://siasky.net/AADsQBY2Bguqfitm2cMGaLrdIJ0ObWOtZignAF45f_Of-w)")
+                    comment.reply("very money such wow\n\nDay Earnings(24h) " + str(dayEarnings) + " GLM" + "\n\n[Command List](https://siasky.net/AAC1UFWIyuEahU1EdufDtBoRa-fqQ6iYP-aX2aUVAE-ncw)")
                 canPost = 1
             if "!online" in comment_lower:
                 for reply in comment.replies:
@@ -125,7 +125,7 @@ for submission in subreddit.new(limit=1):
                 if canPost:
                     log("bot wasnt here")
                     log("----- REPLY -----")
-                    comment.reply("Now this is a lot!\n\nOnline Providers " + str(providers) + "\n\n[Command List](https://siasky.net/AADsQBY2Bguqfitm2cMGaLrdIJ0ObWOtZignAF45f_Of-w)")
+                    comment.reply("Now this is a lot!\n\nOnline Providers " + str(providers) + "\n\n[Command List](https://siasky.net/AAC1UFWIyuEahU1EdufDtBoRa-fqQ6iYP-aX2aUVAE-ncw)")
                 canPost = 1
                 
 log("Done! Quitting ...")
