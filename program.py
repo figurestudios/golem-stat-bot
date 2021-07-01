@@ -77,6 +77,7 @@ for submission in subreddit.new(limit=1):
     log(submission.title)
     # TODO SUBMISSION TITLE LOGIC
     for comment in submission.comments:
+        canPost = 1
         if hasattr(comment,"body"):
             comment_lower = comment.body.lower()
             log("------------------")
