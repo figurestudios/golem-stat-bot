@@ -1,9 +1,9 @@
 {
 	"debug":1, 
 	"canPost":1, 
-	"client_id":"ThXBYov_I2Rx-Q",
-	"client_secret":"-x4NMhxOxK3MG_pVA6xEAxXWIGAQ_w",
-	"user_agent":"<console:GOLEMSTATS:1.0>",
-	"username":"golem-stat-bot",
-	"password":"stelballesbot"
+	"client_id":"placeholder",
+	"client_secret":"placeholder",
+	"user_agent":"placeholder",
+	"username":"placeholder",
+	"password":"placeholder"
 }
